@@ -35,7 +35,7 @@ function logar(login, password, departamento, res){
     var con = mysql.createConnection({
         host: "localhost",
         user: "root",
-        password: "S@fira159",
+        password: "minhaSenha123",
         database: "almox"
     });
 
