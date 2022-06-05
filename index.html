@@ -1,70 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de login</title>
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" 
-    rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-    crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
 </head>
-<style>/*sistemas*/
-    h2 {text-align: center;}
+<style>
+    /*sistemas*/
+    h2 {
+        text-align: center;
+    }
 </style>
 
 <body>
 
     <div class="container">
-        <div class="row justify-content-center" style="background-color: rgb(14, 78, 8)">
+        <div class="d-flex justify-content-center" style="background-color: rgb(14, 78, 8, 0.8)">
             <h2 class="text-white">SISTEMAS DE INTEGRAÇÃO DE ALMOXARIFADO</h2>
         </div>
-        <div class="h-100 d-flex bg-image justify-content-center align-items-center" 
-        style="background-image: url('imgs/imgLog.jpg');">    
+        <div class="h-100 d-flex bg-image justify-content-center align-items-center"
+            style="background-image: url('imgs/imgLog.jpg');">
 
-        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
-            
-            <div class="d-flex justify-content-center align-items-center h-100 ">
-                <form id="departamentForm" class="col-12 justify-content-center">
-                    
-                    <h1 class="text-center bold text-white">Login</h1>
+            <div class="mask" style="background-color: rgba(0, 0, 0, 0.6); padding-left: 20pt; padding-right: 20pt;">
 
-                    <!-- Email input -->
-                    <div class="form-outline mb-4">
-                        <input type="email" id="formEmail" name="email" class="form-control" placeholder="Nome"/>
-                        
-                    </div>
+                <div class="d-flex justify-content-center align-items-center h-100 ">
+                    <form id="departamentForm" class="col-12 justify-content-center">
 
-                    <!-- Password input -->
-                    <div class="form-outline mb-4">
-                        <input type="password" id="formPassword" class="form-control" placeholder="Senha"/>
-                    </div>
-                   <select class="form-select" name="departamentos" id="departamentos" form="departamentForm">
-                        <option value="0" selected>Departamento?...</option>
-                        <option value="1">Almoxarifado</option>
-                        <option value="2">Compras</option>
-                        <option value="3">Vendas</option>
-                        <option value="4">Manutenção</option>
-                  </select>
-                  <br><br>
-                     <!-- Submit button -->
-                    <button type="submit" class="btn btn-primary col-12">Log in</button>
-                    <br><br>
-                </form>  
+                        <h1 class="text-center bold text-white">Login</h1>
+
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <input type="email" id="formEmail" name="email" class="form-control" placeholder="Nome" />
+
+                        </div>
+
+                        <!-- Password input -->
+                        <div class="form-outline mb-4">
+                            <input type="password" id="formPassword" class="form-control" placeholder="Senha" />
+                        </div>
+                        <select class="form-select" name="departamentos" id="departamentos" form="departamentForm">
+                            <option value="0" selected>Departamento?...</option>
+                            <option value="1">Almoxarifado</option>
+                            <option value="2">Compras</option>
+                            <option value="3">Vendas</option>
+                            <option value="4">Manutenção</option>
+                        </select>
+                        <br><br>
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-primary col-12" style="border-radius:25px;">Log in</button>
+                        <br><br>
+                    </form>
+                </div>
             </div>
-          </div>
 
         </div>
 
-       
-        
-    </div>
-   
 
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    </div>
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
 
 </body>
+
 </html>
