@@ -10,7 +10,6 @@ const app = express();
 
 var logado = false;
 
-
 // utilise acesso
 app.use(session({secret:'asdfghjkl123456789'}));
 app.use(bodyParser.urlencoded({extended:true}));
@@ -19,6 +18,7 @@ app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 app.use('/public', express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname,'/views')); //caminho da interface
+app.use(express.static('public')); // access to file
 
 // rota post
 app.post('/', (req, res)=>{   
