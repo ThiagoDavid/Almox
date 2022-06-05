@@ -25,26 +25,27 @@
             <h2 class="text-white">SISTEMAS DE INTEGRAÇÃO DE ALMOXARIFADO</h2>
         </div>
         <div class="h-100 d-flex bg-image justify-content-center align-items-center"
-            style="background-image: url('imgs/imgLog.jpg');">
+            style="background-image: url('../imgs/imgLog.jpg');">
+            <img src="../imgs/imgLog.jpg" alt="">
 
             <div class="mask" style="background-color: rgba(0, 0, 0, 0.6); padding-left: 20pt; padding-right: 20pt;">
 
                 <div class="d-flex justify-content-center align-items-center h-100 ">
-                    <form id="departamentForm" class="col-12 justify-content-center">
+                    <form id="departamentForm" class="col-12 justify-content-center" method="post">
 
                         <h1 class="text-center bold text-white">Login</h1>
 
                         <!-- Email input -->
                         <div class="form-outline mb-4">
-                            <input type="email" id="formEmail" name="email" class="form-control" placeholder="Nome" />
+                            <input type="email" id="formEmail" name="login" class="form-control" placeholder="Nome" />
 
                         </div>
 
                         <!-- Password input -->
                         <div class="form-outline mb-4">
-                            <input type="password" id="formPassword" class="form-control" placeholder="Senha" />
+                            <input type="password" id="formPassword" class="form-control" placeholder="Senha" name="password"/>
                         </div>
-                        <select class="form-select" name="departamentos" id="departamentos" form="departamentForm">
+                        <select class="form-select" name="departamento" id="departamentos" form="departamentForm">
                             <option value="0" selected>Departamento?...</option>
                             <option value="1">Almoxarifado</option>
                             <option value="2">Compras</option>
