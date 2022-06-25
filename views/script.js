@@ -59,18 +59,36 @@ function mudarTela(option) {
 }
 //Telas
 function exibirTelaProdutos() {
-	$('#main').html(`	
-	<form class="form-inline">
-	<div class="form-group mb-2">
-	  <label for="staticEmail2" class="sr-only">Email</label>
-	  <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
+	$('#myModal').modal('show')
+	$('#myModal .modal-body').html(`	
+		<div id="main">
+		<form class="form-inline">
+			<div class="form-group mb-2">        
+				<select class="form-control" id="exampleFormControlSelect1">
+					<option>Código</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+				</select>
+			</div>
+			<div class="form-group mx-sm-3 mb-2">
+				<select class="form-control" id="exampleFormControlSelect1">
+					<option>Tipo</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+				</select>
+			</div>
+			<div class="form-group mx-sm-3 mb-2">
+				<button type="submit" class="btn btn-primary ">Filtro</button>
+			</div>
+			<div class="form-group mx-sm-3 mb-2">
+				<button type="submit" class="btn btn-primary ">Limpar</button>
+			</div>
+		</form>
 	</div>
-	<div class="form-group mx-sm-3 mb-2">
-	  <label for="inputPassword2" class="sr-only">Password</label>
-	  <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
-	</div>
-	<button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
-  </form>
 `);
 }
 $(document).ready(function () {
