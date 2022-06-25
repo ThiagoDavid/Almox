@@ -33,20 +33,20 @@ function test() {
 function mudarTela(option) {
 	
 	switch (option) {
-		case "Address Book":
-			$('#main').text("Página de Adress Book")
+		case "Produtos":
+			exibirTelaProdutos();
 			break;
-		case "Dashboard":
-			$('#main').text("Página de Dashboard")
+		case "Requisições":
+			$('#main').text("Página de requisições")
 			break;
-		case "Components":
-			$('#main').text("Página de Components")
+		case "Peiddos":
+			$('#main').text("Página de pedidos")
 			break;
-		case "Calendar":
-			$('#main').text("Página de Calendar")
+		case "Fornecedor":
+			$('#main').text("Página de Fornecedor")
 			break;
-		case "Charts":
-			$('#main').text("Página de Charts")
+		case "Calendário":
+			$('#main').text("Página de calendário")
 			break;
 			case "Documents":
 				$('#main').text("Página de Documents")
@@ -56,6 +56,40 @@ function mudarTela(option) {
 				break;	
 	}
 
+}
+//Telas
+function exibirTelaProdutos() {
+	$('#myModal').modal('show')
+	$('#myModal .modal-body').html(`	
+		<div id="main">
+		<form class="form-inline">
+			<div class="form-group mb-2">        
+				<select class="form-control" id="exampleFormControlSelect1">
+					<option>Código</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+				</select>
+			</div>
+			<div class="form-group mx-sm-3 mb-2">
+				<select class="form-control" id="exampleFormControlSelect1">
+					<option>Tipo</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+				</select>
+			</div>
+			<div class="form-group mx-sm-3 mb-2">
+				<button type="submit" class="btn btn-primary ">Filtro</button>
+			</div>
+			<div class="form-group mx-sm-3 mb-2">
+				<button type="submit" class="btn btn-primary ">Limpar</button>
+			</div>
+		</form>
+	</div>
+`);
 }
 $(document).ready(function () {
 	setTimeout(function () { test(); });
@@ -84,9 +118,6 @@ jQuery(document).ready(function ($) {
 	// Add active class to target link
 	target.parent().addClass('active');
 });
-
-
-
 
 // Add active class on another page linked
 // ==========================================
