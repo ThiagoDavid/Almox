@@ -33,20 +33,20 @@ function test() {
 function mudarTela(option) {
 	
 	switch (option) {
-		case "Address Book":
-			$('#main').text("Página de Adress Book")
+		case "Produtos":
+			exibirTelaProdutos();
 			break;
-		case "Dashboard":
-			$('#main').text("Página de Dashboard")
+		case "Requisições":
+			$('#main').text("Página de requisições")
 			break;
-		case "Components":
-			$('#main').text("Página de Components")
+		case "Peiddos":
+			$('#main').text("Página de pedidos")
 			break;
-		case "Calendar":
-			$('#main').text("Página de Calendar")
+		case "Fornecedor":
+			$('#main').text("Página de Fornecedor")
 			break;
-		case "Charts":
-			$('#main').text("Página de Charts")
+		case "Calendário":
+			$('#main').text("Página de calendário")
 			break;
 			case "Documents":
 				$('#main').text("Página de Documents")
@@ -56,6 +56,22 @@ function mudarTela(option) {
 				break;	
 	}
 
+}
+//Telas
+function exibirTelaProdutos() {
+	$('#main').html(`	
+	<form class="form-inline">
+	<div class="form-group mb-2">
+	  <label for="staticEmail2" class="sr-only">Email</label>
+	  <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
+	</div>
+	<div class="form-group mx-sm-3 mb-2">
+	  <label for="inputPassword2" class="sr-only">Password</label>
+	  <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+	</div>
+	<button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
+  </form>
+`);
 }
 $(document).ready(function () {
 	setTimeout(function () { test(); });
@@ -84,9 +100,6 @@ jQuery(document).ready(function ($) {
 	// Add active class to target link
 	target.parent().addClass('active');
 });
-
-
-
 
 // Add active class on another page linked
 // ==========================================
