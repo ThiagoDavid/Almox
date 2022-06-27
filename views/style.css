@@ -113,7 +113,15 @@ div#main {
 	padding-top: 20px;
 	padding-left: 15px;
 }
-
+button { 
+	width: 80px;
+}
+select.form-control#codigoProdutoSelect, select.form-control#tipoProdutoSelect{
+	width: 185px;
+}
+div.btn-group button.btn {
+	width:130px;
+}
 @media(min-width: 992px){
 	.navbar-expand-custom {
 	    -ms-flex-flow: row nowrap;

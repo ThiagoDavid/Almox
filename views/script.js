@@ -1,3 +1,4 @@
+import {paginaProduto as gerarPaginaProduto} from "./geradorPaginas.js";
 // ---------Responsive-navbar-active-animation-----------
 function test() {
 	var tabsNewAnim = $('#navbarSupportedContent');
@@ -12,7 +13,7 @@ function test() {
 		"left": itemPosNewAnimLeft.left + "px",
 		"height": activeWidthNewAnimHeight + "px",
 		"width": activeWidthNewAnimWidth + "px"
-	});
+	});	
 	$("#navbarSupportedContent").on("click", "li", function (e) {
 		$('#navbarSupportedContent ul li').removeClass("active");
 		$(this).addClass('active');
@@ -26,12 +27,17 @@ function test() {
 			"height": activeWidthNewAnimHeight + "px",
 			"width": activeWidthNewAnimWidth + "px"
 		});
-
 		mudarTela($(this).text().trim());
 	});
+	
+	$("#iconInfo").on("click", function(e) {
+		alert("Exibir ajuda");
+	});
+
+
 }
 function mudarTela(option) {
-	
+
 	switch (option) {
 		case "Produtos":
 			exibirTelaProdutos();
@@ -48,48 +54,19 @@ function mudarTela(option) {
 		case "Calendário":
 			$('#main').text("Página de calendário")
 			break;
-			case "Documents":
-				$('#main').text("Página de Documents")
-				break;
-			default:
-				$('#main').text(" Deu ruim (" +option+")");
-				break;	
+		case "Documents":
+			$('#main').text("Página de Documents")
+			break;
+		default:
+			$('#main').text(" Deu ruim (" + option + ")");
+			break;
 	}
 
 }
 //Telas
 function exibirTelaProdutos() {
-	$('#myModal').modal('show')
-	$('#myModal .modal-body').html(`	
-		<div id="main">
-		<form class="form-inline">
-			<div class="form-group mb-2">        
-				<select class="form-control" id="exampleFormControlSelect1">
-					<option>Código</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-					<option>5</option>
-				</select>
-			</div>
-			<div class="form-group mx-sm-3 mb-2">
-				<select class="form-control" id="exampleFormControlSelect1">
-					<option>Tipo</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-					<option>5</option>
-				</select>
-			</div>
-			<div class="form-group mx-sm-3 mb-2">
-				<button type="submit" class="btn btn-primary ">Filtro</button>
-			</div>
-			<div class="form-group mx-sm-3 mb-2">
-				<button type="submit" class="btn btn-primary ">Limpar</button>
-			</div>
-		</form>
-	</div>
-`);
+	let paginaProduto = gerarPaginaProduto();
+	$('#form-body').html(paginaProduto);
 }
 $(document).ready(function () {
 	setTimeout(function () { test(); });
@@ -117,22 +94,5 @@ jQuery(document).ready(function ($) {
 	var target = $('#navbarSupportedContent ul li a[href="' + path + '"]');
 	// Add active class to target link
 	target.parent().addClass('active');
+	exibirTelaProdutos();
 });
-
-// Add active class on another page linked
-// ==========================================
-// $(window).on('load',function () {
-//     var current = location.pathname;
-//     console.log(current);
-//     $('#navbarSupportedContent ul li a').each(function(){
-//         var $this = $(this);
-//         // if the current path is like this link, make it active
-//         if($this.attr('href').indexOf(current) !== -1){
-//             $this.parent().addClass('active');
-//             $this.parents('.menu-submenu').addClass('show-dropdown');
-//             $this.parents('.menu-submenu').parent().addClass('active');
-//         }else{
-//             $this.parent().removeClass('active');
-//         }
-//     })
-// });
