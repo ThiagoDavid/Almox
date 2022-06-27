@@ -122,6 +122,21 @@ select.form-control#codigoProdutoSelect, select.form-control#tipoProdutoSelect{
 div.btn-group button.btn {
 	width:130px;
 }
+/* -- Estilo tela de produtos -- */
+.container{
+    padding-top: 20px;
+    
+}
+
+.botao{
+    margin-left: 20rem;
+}
+.botao2{
+    margin-left: 20rem;
+    padding-top: 10px;
+}
+/* ----------------------------- */
+
 @media(min-width: 992px){
 	.navbar-expand-custom {
 	    -ms-flex-flow: row nowrap;

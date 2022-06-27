@@ -1,4 +1,4 @@
-import {paginaProduto as gerarPaginaProduto} from "./geradorPaginas.js";
+import {gerarPaginaProduto, gerarPaginaPedidos, gerarPaginaRequisicoes} from "./geradorPaginas.js";
 // ---------Responsive-navbar-active-animation-----------
 function test() {
 	var tabsNewAnim = $('#navbarSupportedContent');
@@ -43,10 +43,10 @@ function mudarTela(option) {
 			exibirTelaProdutos();
 			break;
 		case "Requisições":
-			$('#main').text("Página de requisições")
+			exibirTelaRequisicoes();
 			break;
-		case "Peiddos":
-			$('#main').text("Página de pedidos")
+		case "Pedidos":			
+			exibirTelaPedidos();
 			break;
 		case "Fornecedor":
 			$('#main').text("Página de Fornecedor")
@@ -64,6 +64,14 @@ function mudarTela(option) {
 
 }
 //Telas
+function exibirTelaRequisicoes() {
+	let paginaRequisicoes = gerarPaginaRequisicoes();
+	$('#form-body').html(paginaRequisicoes);
+}
+function exibirTelaPedidos() {
+	let paginaPedidos = gerarPaginaPedidos();
+	$('#form-body').html(paginaPedidos);
+}
 function exibirTelaProdutos() {
 	let paginaProduto = gerarPaginaProduto();
 	$('#form-body').html(paginaProduto);
