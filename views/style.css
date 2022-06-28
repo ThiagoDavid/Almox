@@ -116,7 +116,7 @@ div#main {
 button { 
 	width: 80px;
 }
-select.form-control#codigoProdutoSelect, select.form-control#tipoProdutoSelect{
+select.form-select#codigoProdutoSelect, select.form-select#tipoProdutoSelect{
 	width: 185px;
 }
 div.btn-group button.btn {
